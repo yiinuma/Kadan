@@ -1,0 +1,21 @@
+.c-reservation-btn {
+    height: 54px;
+    padding-left: 69px;
+    padding-right: 37px;
+    background: #978F10;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 54px;
+    z-index: 9999;
+
+    .calender{
+        width: 22px;
+        position: absolute;
+        top: 16px;
+        left: 37px;
+    }
+
+}
+

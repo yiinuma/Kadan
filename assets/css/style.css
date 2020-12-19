@@ -320,8 +320,7 @@ progress {
 }
 
 @font-face {
-  font-family: 'Noto Sans JP', sans-serif;
-  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap");
+  font-family: "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho" "ヒラギノ明朝 Pro W3", "Hiragino Kaku Gothic Pro", "HiraMinProN-W3" "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
 }
 
 html {
@@ -331,7 +330,7 @@ html {
 body {
   color: #333;
   font-size: 1.6em;
-  font-family: "Noto Sans JP";
+  font-family: "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho" "ヒラギノ明朝 Pro W3", "Hiragino Kaku Gothic Pro", "HiraMinProN-W3" "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
   font-weight: 700;
   line-height: 1.6;
   letter-spacing: 0;
@@ -370,22 +369,15 @@ ul {
 .l-header {
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 1000;
-  width: 100%;
-  height: 94px;
+  width: 100vw;
+  height: 80px;
   background-color: #fff;
-  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-}
-
-@media screen and (max-width: 961px) {
-  .l-header {
-    height: 55px;
-  }
 }
 
 .l-main {
-  padding-top: 94px;
+  padding-top: 80px;
   margin: 0 auto;
 }
 
@@ -396,32 +388,24 @@ ul {
   }
 }
 
-.c-contact-btn, .c-form-submit-btn {
-  width: 155px;
-  height: 37px;
-  background: -webkit-gradient(linear, left top, right top, from(#fa41cc), to(#6020b0));
-  background: linear-gradient(90deg, #fa41cc, #6020b0);
+.c-reservation-btn {
+  height: 54px;
+  padding-left: 69px;
+  padding-right: 37px;
+  background: #978F10;
   color: #fff;
-  border-radius: 10px;
   display: inline-block;
   text-align: center;
-  font-size: 1.4rem;
-  line-height: 37px;
-  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  font-size: 1.6rem;
+  line-height: 54px;
   z-index: 9999;
 }
 
-@media screen and (max-width: 961px) {
-  .c-contact-btn, .c-form-submit-btn {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 961px) {
-  .c-form-submit-btn {
-    display: inline-block;
-  }
+.c-reservation-btn .calender {
+  width: 22px;
+  position: absolute;
+  top: 16px;
+  left: 37px;
 }
 
 .c-burger {
@@ -440,12 +424,12 @@ ul {
 .c-burger__line {
   width: 100%;
   height: 2px;
-  background-color: #3ba6c9;
+  background-color: black;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-@media screen and (max-width: 961px) {
+@media screen and (max-width: 768px) {
   .c-burger {
     position: fixed;
     display: -webkit-box;
@@ -458,14 +442,11 @@ ul {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     position: absolute;
-    top: 2px;
+    top: 15px;
     right: 12px;
   }
-  .c-burger.is_active {
-    background-color: #3ba6c9;
-  }
   .c-burger.is_active .c-burger__line {
-    background-color: #fff;
+    background-color: black;
   }
   .c-burger.is_active .c-burger__line:first-of-type {
     -webkit-transform: rotate(-45deg) translate(-7px, 7px);
@@ -481,29 +462,32 @@ ul {
 }
 
 .p-header__inner {
-  max-width: 1022px;
-  margin: 0 auto;
-  padding: 0 20px 0 20px;
+  margin-left: 1.2vw;
+  margin-right: 0.9vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  height: 80px;
+  background-color: #fff;
+  font-family: "YuMincho";
+}
+
+.p-header__inner .header__btn {
+  margin-left: auto;
   position: relative;
-  height: 100%;
 }
 
-@media screen and (max-width: 640px) {
-  .p-header__inner {
-    max-width: 100%;
+@media screen and (max-width: 768px) {
+  .p-header__inner .header__btn {
+    margin-right: 10%;
   }
 }
 
-.p-header__inner .header__title-wrapper {
+.p-header__inner .header__title-wrapper a {
+  height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -512,28 +496,22 @@ ul {
           align-items: center;
 }
 
-.p-header__inner .header__title-wrapper .header__logo {
-  width: 47px;
-  height: 47px;
+.p-header__inner .header__title-wrapper a .header__logo {
+  width: 40px;
+  vertical-align: middle;
 }
 
-@media screen and (max-width: 961px) {
-  .p-header__inner .header__title-wrapper .header__logo {
-    width: 36px;
-    height: 36px;
-  }
-}
-
-.p-header__inner .header__title-wrapper .header__title {
-  margin-left: 16px;
-  font-size: 2.8rem;
+.p-header__inner .header__title-wrapper a span {
+  margin-left: 15px;
+  font-size: 3.2rem;
+  line-height: 1.5;
   font-weight: bold;
+  letter-spacing: 0.18em;
+  color: #333;
 }
 
-@media screen and (max-width: 961px) {
-  .p-header__inner .header__title-wrapper .header__title {
-    font-size: 2.4rem;
-  }
+.p-header__inner .header__nav {
+  margin-left: 120px;
 }
 
 .p-header__inner .header__nav ul {
@@ -546,7 +524,7 @@ ul {
 }
 
 .p-header__inner .header__nav ul li {
-  margin-right: 46px;
+  margin-right: 30px;
 }
 
 .p-header__inner .header__nav ul li a {
@@ -555,7 +533,7 @@ ul {
   color: #333;
 }
 
-@media screen and (max-width: 961px) {
+@media screen and (max-width: 768px) {
   .p-header__inner .header__nav {
     width: 0;
     opacity: 0;
@@ -576,7 +554,7 @@ ul {
         -ms-flex-direction: column;
             flex-direction: column;
     position: absolute;
-    top: 55px;
+    top: 80px;
     left: 0;
     width: 100%;
     background-color: #fff;
@@ -585,7 +563,7 @@ ul {
   .p-header__inner .header__nav.is_active ul li {
     margin-right: 0;
     text-align: left;
-    padding: 8px 20px;
+    padding: 10px 60px;
   }
   .p-header__inner .header__nav.is_active ul li a {
     display: block;
@@ -606,7 +584,7 @@ ul {
   }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .p-main-visual {
     height: 100%;
   }
@@ -629,7 +607,7 @@ ul {
   }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .p-main-visual .main-visual.circle {
     display: none;
   }
@@ -643,7 +621,7 @@ ul {
   height: auto;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .p-main-visual .main-visual.human {
     display: none;
   }
@@ -663,7 +641,7 @@ ul {
   padding-left: 20px;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .p-main-visual .main-inner {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -678,7 +656,7 @@ ul {
   z-index: 100;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .p-main-visual .main-copy {
     width: 100%;
     text-align: center;
@@ -813,7 +791,7 @@ ul {
   }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .p-features .feature-inner .mark-desc br {
     display: none;
   }
@@ -893,7 +871,7 @@ ul {
   margin-top: 154px;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .p-price {
     margin-top: 50px;
   }
@@ -912,7 +890,7 @@ ul {
   }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .p-price .price-title {
     padding-top: 30px;
   }
@@ -947,7 +925,7 @@ ul {
   width: 100%;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .p-price .price-inner table {
     font-size: 1.5rem;
   }
@@ -969,7 +947,7 @@ ul {
   border: 1px solid #E5E5E5;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .p-price .price-inner table th {
     width: 55%;
   }
@@ -981,7 +959,7 @@ ul {
   border: 1px solid #E5E5E5;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .p-price .price-inner table td {
     width: 45%;
   }
@@ -993,7 +971,7 @@ ul {
   padding-bottom: 68px;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .p-price .price-inner p {
     font-size: 1.5rem;
   }
@@ -1050,7 +1028,7 @@ ul {
   padding: 24px 45px;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .p-faq .faq-inner .faq-a {
     padding: 20px 20px;
   }
@@ -1272,7 +1250,7 @@ ul {
   background-color: #fff;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .p-contact .form-wrapper {
     width: 95%;
   }
@@ -1282,7 +1260,7 @@ ul {
   padding: 31px 63px 44px 63px;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .p-contact .form-wrapper-inner {
     padding: 31px 3% 44px 3%;
   }

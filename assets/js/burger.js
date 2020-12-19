@@ -3,12 +3,12 @@ $(function () {
   $("#nav-btn").on("click", function () {
     if (!$(".header__nav").hasClass("is_active")) {
       $(".header__nav").addClass("is_active");
-      $(".header__btn").addClass("is_active");
+      // $(".header__btn").addClass("is_active");
       $(".c-burger").addClass("is_active");
     } else {
 
       $(".header__nav").removeClass("is_active");
-      $(".header__btn").removeClass("is_active");
+      // $(".header__btn").removeClass("is_active");
       $(".c-burger").removeClass("is_active");
     }
   });
@@ -26,7 +26,7 @@ $(function () {
     if (windowWidth >= 961) {
       // PCの処理
       $(".header__nav").removeClass("is_active");
-      $(".header__btn").removeClass("is_active");
+      // $(".header__btn").removeClass("is_active");
       $(".c-burger").removeClass("is_active");
     }
   });

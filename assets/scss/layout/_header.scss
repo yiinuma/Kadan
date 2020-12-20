@@ -5,6 +5,16 @@
     z-index: 1000;
     width: 100vw;
     height: 80px;
-    background-color: #fff;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    background-color: black;
+    transition: 0.5s;
 
+    @include mq-up(sm) {
+        padding-right: calc(1vw + 2px);
+    }
+
+    &.scrolled {
+        background-color: #fff;
+    }
 }

@@ -1,14 +1,14 @@
 // burger
 
-$burger-height: 50px;
-$burger-width: 50px;
+$burger-height: 40px;
+$burger-width: 40px;
 
 .c-burger {
-  display: none;
+
   height: $burger-height;
   width: $burger-width;
-  padding: 12px;
-  transition: 0.3s;
+  padding: 10px;
+  transition: 0.5s;
   box-sizing: border-box;
   cursor: pointer;
   outline: none;
@@ -21,34 +21,36 @@ $burger-width: 50px;
     transition: 0.3s;
   }
 
-  @include mq-down(sm) {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    position: absolute;
-    top:15px;
-    right: 12px;
-  
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  top: 20px;
+  right: 6px;
 
-    &.is_active {
-      // background-color: $sub-ttl-color;
 
-      .c-burger__line {
-        background-color:black;
-      }
+  &.is_active {
+    // background-color: $sub-ttl-color;
 
-      .c-burger__line:first-of-type {
-        transform: rotate(-45deg) translate(-7px, 7px);
-      }
-
-      .c-burger__line:nth-child(2) {
-        opacity: 0;
-      }
-
-      .c-burger__line:last-of-type {
-        transform: rotate(-135deg) translate(5px, 6px);
-      }
+    .c-burger__line {
+      background-color: black;
     }
+
+    .c-burger__line:first-of-type {
+      transform: rotate(-45deg) translate(-5px, 5px);
+    }
+
+    .c-burger__line:nth-child(2) {
+      opacity: 0;
+    }
+
+    .c-burger__line:last-of-type {
+      transform: rotate(-135deg) translate(5px, 5px);
+    }
+  }
+
+  @include mq-up(sm) {
+    display: none;
   }
 }

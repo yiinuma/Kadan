@@ -23,8 +23,8 @@ $(function () {
   $win.on("load resize", function () {
     var windowWidth = window.innerWidth;
 
-    if (windowWidth >= 961) {
-      // PCの処理
+    if (windowWidth >= 768) {
+      // TABの処理
       $(".header__nav").removeClass("is_active");
       // $(".header__btn").removeClass("is_active");
       $(".c-burger").removeClass("is_active");

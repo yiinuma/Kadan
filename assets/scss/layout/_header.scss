@@ -2,12 +2,11 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 100;
     width: 100vw;
     height: 80px;
     padding-left: 1vw;
     padding-right: 1vw;
-    background-color: black;
     transition: 0.5s;
 
     @include mq-up(sm) {

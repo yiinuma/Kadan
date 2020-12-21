@@ -5,9 +5,10 @@
     align-items: center;
     height: 80px;
     font-family: "YuMincho";
+    position: relative;
 
     &.scrolled {
-        .header__title {
+        .header__logo {
             a {
                 color: #000;
 
@@ -17,12 +18,16 @@
             }
         }
 
-        .header__nav {
-            a {
-                color: #000;
-            }
+        .header-menu a {
+            color: #000;
         }
+    }
 
+    .header-menu {
+        a,
+        a:link {
+            color: #000;
+        }
     }
 
     .header__btn {
@@ -38,9 +43,11 @@
 
     .header__title {
         margin-left: 5px;
+
         @include mq-up(sm) {
             margin-left: 0;
         }
+
         a {
             display: flex;
             align-items: center;
@@ -84,7 +91,7 @@
         opacity: 0;
         visibility: hidden;
         transition: opacity .4s,
-        visibility 0s;
+            visibility 0s;
 
         &.is_active {
             opacity: 1;

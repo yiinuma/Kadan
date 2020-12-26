@@ -7,6 +7,16 @@
     font-family: "YuMincho";
     position: relative;
 
+    .reservation-inner {
+        position: absolute;
+        top: 200px;
+        color: #fff;
+
+        &.is_open {
+            color: red;
+        }
+    }
+
     &.scrolled {
         .header__logo {
             a {
@@ -24,15 +34,19 @@
     }
 
     .header-menu {
+
         a,
         a:link {
             color: #000;
         }
     }
 
-    .header__btn {
+
+    .c-reservation-btn {
         position: relative;
-        right: 45px;
+        right: 17%;
+        outline: none;
+
 
         @include mq-up(sm) {
             margin-left: auto;
@@ -43,6 +57,7 @@
 
     .header__title {
         margin-left: 5px;
+        padding-left: 1vw;
 
         @include mq-up(sm) {
             margin-left: 0;
@@ -90,8 +105,7 @@
         width: 0;
         opacity: 0;
         visibility: hidden;
-        transition: opacity .4s,
-            visibility 0s;
+        transition: opacity .4s, visibility 0s;
 
         &.is_active {
             opacity: 1;

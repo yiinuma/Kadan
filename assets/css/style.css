@@ -373,7 +373,6 @@ ul {
   z-index: 100;
   width: 100vw;
   height: 80px;
-  padding-left: 1vw;
   padding-right: 1vw;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -428,9 +427,9 @@ ul {
 }
 
 .c-burger {
-  height: 40px;
-  width: 40px;
-  padding: 10px;
+  height: 50px;
+  width: 50px;
+  padding: 12px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   -webkit-box-sizing: border-box;
@@ -447,10 +446,10 @@ ul {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   position: fixed;
-  z-index: 1000;
+  z-index: 150;
   position: absolute;
-  top: 20px;
-  right: 8px;
+  top: 16px;
+  right: 3px;
 }
 
 .c-burger__line {
@@ -461,7 +460,7 @@ ul {
   transition: 0.3s;
 }
 
-.c-burger__line.scrolled {
+.c-burger.scrolled .c-burger__line {
   background-color: #000;
 }
 
@@ -474,8 +473,8 @@ ul {
 }
 
 .c-burger.is_active .c-burger__line:first-of-type {
-  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
-          transform: rotate(-45deg) translate(-6px, 6px);
+  -webkit-transform: rotate(-45deg) translate(-7px, 7px);
+          transform: rotate(-45deg) translate(-7px, 7px);
 }
 
 .c-burger.is_active .c-burger__line:nth-child(2) {
@@ -483,14 +482,38 @@ ul {
 }
 
 .c-burger.is_active .c-burger__line:last-of-type {
-  -webkit-transform: rotate(-135deg) translate(3px, 4px);
-          transform: rotate(-135deg) translate(3px, 4px);
+  -webkit-transform: rotate(-135deg) translate(5px, 6px);
+          transform: rotate(-135deg) translate(5px, 6px);
+}
+
+.c-burger.is_active.scrolled .c-burger__line:first-of-type,
+.c-burger.is_active.scrolled .c-burger__line:last-of-type {
+  background-color: #000;
 }
 
 @media screen and (min-width: 767px) {
   .c-burger {
     display: none;
   }
+}
+
+.c-filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.c-filter.is_active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .p-header__inner {
@@ -507,6 +530,16 @@ ul {
   height: 80px;
   font-family: "YuMincho";
   position: relative;
+}
+
+.p-header__inner .reservation-inner {
+  position: absolute;
+  top: 200px;
+  color: #fff;
+}
+
+.p-header__inner .reservation-inner.is_open {
+  color: red;
 }
 
 .p-header__inner.scrolled .header__logo a {
@@ -526,13 +559,14 @@ ul {
   color: #000;
 }
 
-.p-header__inner .header__btn {
+.p-header__inner .c-reservation-btn {
   position: relative;
-  right: 45px;
+  right: 17%;
+  outline: none;
 }
 
 @media screen and (min-width: 767px) {
-  .p-header__inner .header__btn {
+  .p-header__inner .c-reservation-btn {
     margin-left: auto;
     right: 0;
   }
@@ -540,6 +574,7 @@ ul {
 
 .p-header__inner .header__title {
   margin-left: 5px;
+  padding-left: 1vw;
 }
 
 @media screen and (min-width: 767px) {

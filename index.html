@@ -8,8 +8,12 @@
 	<meta name="description" content="日本古来の素材と現代的表現を併せ持つ温泉旅館、石井花壇。伝統的「和」の息づく空間で、至極のひとときをお過ごしください。" />
 	<title>石井花壇 | 温海温泉旅館【公式サイト】</title>
 	<link rel="stylesheet" href="assets/css/style.css" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+	<script src="assets/js/header.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/tab.js" defer></script>
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="assets/js/aos.js"></script>
 
 </head>
 
@@ -19,29 +23,35 @@
 			<div class="header__title">
 				<h1 class="header__logo"><a href="./">石井花壇</a></h1>
 			</div>
-			<nav class="header__nav">
-				<ul class="header-menu">
+			<nav class="header__nav" id="header-nav">
+				<ul class="header-menu" >
 					<li><a href="">お部屋</a></li>
 					<li><a href="">お料理</a></li>
 					<li><a href="">温泉</a></li>
 				</ul>
 			</nav>
 			<!-- /.header__nav -->
-			<div class="header__btn">
-				<a href="#contact" class="c-reservation-btn"><img class="calender" src="assets/img/calender.png"
-					alt="カレンダー"><span>宿泊予約</span></a>
-				</div>
-				
-			</div>
-			<button type="button" id="nav-btn" class="c-burger">
+			<button type="button" class="c-reservation-btn">
+				<img class="calender" src="assets/img/calender.png"
+						alt="カレンダー"><span>宿泊予約</span>
+			</button>
+			<div id="filter" class="c-filter"></div>
+
+			<div class="reservation-inner">
+				<p>testtest</p>
+			</div><!-- /.reservation-inner -->
+			<button type="button" id="burger-btn" class="c-burger">
 				<span class=c-burger__line></span>
 				<span class=c-burger__line></span>
 				<span class=c-burger__line></span>
 			</button>
+		</div>
 		<!-- /.p-header__inner -->
 	</header>
 	<!-- /.header -->
 	<main class="l-main">
+		<div id="filter" class="c-filter"></div>
+
 		<section class="p-first-view">
 			<div class="first__imgBox">
 				<div class="main_img mb01"></div>
@@ -69,9 +79,6 @@
 		</footer>
 
 	</main><!-- /.l-main -->
-	<script src="assets/js/scrolled.js"></script>
-	<script src="assets/js/burger.js"></script>
-	<script src="assets/js/aos.js"></script>
 	<script>
 		AOS.init();
 	</script>

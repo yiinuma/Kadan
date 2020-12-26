@@ -2,8 +2,9 @@
 const body = document.querySelector('body');
 const drawerBtn = document.querySelector('.c-burger');
 const resBtn = document.querySelector('.c-reservation-btn');
-const resIn = document.querySelector('.reservation-inner');
-const close = document.querySelector('.close');
+const resIn = document.querySelector('.c-reservation');
+const close = document.querySelector('.r-close');
+const submit = document.querySelector('.c-submit-btn');
 const drawer = document.getElementById('header-nav');
 const filter = document.getElementById('filter');
 const active = 'is_active';
@@ -64,3 +65,50 @@ filter.addEventListener('click', function () {
         passive: false
     });
 });
+
+close.addEventListener('click', function () {
+    resIn.classList.remove(open);
+    filter.classList.remove(active);
+    // スクロール禁止を解除(SP)
+    document.removeEventListener('touchmove', noScroll, {
+        passive: false
+    });
+    // スクロール禁止を解除(PC)
+    document.removeEventListener('mousewheel', noScroll, {
+        passive: false
+    });
+});
+
+submit.addEventListener('click', function () {
+    resIn.classList.remove(open);
+    filter.classList.remove(active);
+    // スクロール禁止を解除(SP)
+    document.removeEventListener('touchmove', noScroll, {
+        passive: false
+    });
+    // スクロール禁止を解除(PC)
+    document.removeEventListener('mousewheel', noScroll, {
+        passive: false
+    });
+});
+
+/* ====== selectの文字色変更 ======　*/
+function changeItem(obj) {
+    if (obj.value == 0) {
+        obj.style.color = '';
+    } else {
+        obj.style.color = '#000';
+    }
+};
+
+/* ====== flatpickr ======　*/
+// 日曜日始まり
+flatpickr.l10ns.ja.firstDayOfWeek = 0;
+
+const config = {
+    locale: 'ja',
+    minDate: "today",
+    mode: "range",
+    dateFormat: "Y-m-d"
+}
+flatpickr('.flatpickr', config);

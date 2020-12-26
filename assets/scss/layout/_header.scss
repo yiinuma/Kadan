@@ -5,10 +5,11 @@
     z-index: 100;
     width: 100vw;
     height: 80px;
-    padding-right: 1vw;
+    padding: 0 2vw;
     transition: 0.5s;
 
     @include mq-up(sm) {
+        padding-left: 1vw;
         padding-right: calc(1vw + 2px);
     }
 

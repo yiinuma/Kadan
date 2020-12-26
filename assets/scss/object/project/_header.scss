@@ -7,16 +7,6 @@
     font-family: "YuMincho";
     position: relative;
 
-    .reservation-inner {
-        position: absolute;
-        top: 200px;
-        color: #fff;
-
-        &.is_open {
-            color: red;
-        }
-    }
-
     &.scrolled {
         .header__logo {
             a {

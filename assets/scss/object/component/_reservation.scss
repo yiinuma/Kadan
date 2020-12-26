@@ -1,0 +1,107 @@
+.c-reservation {
+  position: fixed;
+  top: -77vh;
+  left: 3%;
+  height: 77vh;
+  width: 94%;
+  background-color: #fff;
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  font-family: "YuMincho";
+  font-weight: normal;
+
+  @include mq-up(sm) {
+    width: 550px;
+    height: 600px;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .reservation-inner {
+    position: relative;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    @include mq-up(sm) {
+      padding-left: 11%;
+      padding-right: 11%;
+    }
+
+    h2 {
+      padding-top: 29px;
+      padding-bottom: 31px;
+      font-size: 2rem;
+      line-height: 1;
+      font-weight: normal;
+      text-align: center;
+    }
+
+    span {
+      position: absolute;
+      top: 20px;
+      right: 22px;
+      width: 16px;
+      height: 16px;
+    }
+
+    form {
+      border-top: solid 1px #E7E7E7;
+
+      label:not(:nth-of-type(1)) {
+        margin-top: 0;
+        display: block;
+        font-size: 1.6rem;
+        line-height: 1;
+
+      }
+
+      label:nth-of-type(1) {
+        margin-top: 34px;
+        display: block;
+        font-size: 1.6rem;
+        line-height: 1;
+
+        @include mq-up(sm) {
+          margin-top: 36px;
+        }
+      }
+
+      input,
+      select {
+        margin-top: 14px;
+        margin-bottom: 14px;
+        width: 100%;
+        font-size: 1.6rem;
+        line-height: 16px;
+        display: block;
+        padding-left: 0.5em;
+        overflow: hidden;
+        border: solid 1px #E7E7E7;
+        box-sizing: border-box;
+
+        @include mq-up(sm) {
+          height: 32px;
+          font-size: 1.4rem;
+        }
+      }
+
+      input::placeholder,
+      select {
+        color: #797878;
+      }
+    }
+  }
+
+  &.is_open {
+    top: 65px;
+    visibility: visible;
+    opacity: 1;
+
+    @include mq-up(sm) {
+      top: 242px;
+    }
+  }
+}

@@ -373,13 +373,14 @@ ul {
   z-index: 100;
   width: 100vw;
   height: 80px;
-  padding-right: 1vw;
+  padding: 0 2vw;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 @media screen and (min-width: 767px) {
   .l-header {
+    padding-left: 1vw;
     padding-right: calc(1vw + 2px);
   }
 }
@@ -499,21 +500,178 @@ ul {
 
 .c-filter {
   position: absolute;
-  top: 0;
+  top: -100vh;
   left: 0;
   height: 100vh;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 200;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.c-filter.is_active {
+  top: 0;
+  visibility: visible;
+  opacity: 1;
+}
+
+.c-reservation {
+  position: fixed;
+  top: -77vh;
+  left: 3%;
+  height: 77vh;
+  width: 94%;
+  background-color: #fff;
   z-index: 9999;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  font-family: "YuMincho";
+  font-weight: normal;
 }
 
-.c-filter.is_active {
+@media screen and (min-width: 767px) {
+  .c-reservation {
+    width: 550px;
+    height: 600px;
+    position: fixed;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+}
+
+.c-reservation .reservation-inner {
+  position: relative;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+@media screen and (min-width: 767px) {
+  .c-reservation .reservation-inner {
+    padding-left: 11%;
+    padding-right: 11%;
+  }
+}
+
+.c-reservation .reservation-inner h2 {
+  padding-top: 29px;
+  padding-bottom: 31px;
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: normal;
+  text-align: center;
+}
+
+.c-reservation .reservation-inner span {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  width: 16px;
+  height: 16px;
+}
+
+.c-reservation .reservation-inner form {
+  border-top: solid 1px #E7E7E7;
+}
+
+.c-reservation .reservation-inner form label:not(:nth-of-type(1)) {
+  margin-top: 0;
+  display: block;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.c-reservation .reservation-inner form label:nth-of-type(1) {
+  margin-top: 34px;
+  display: block;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+@media screen and (min-width: 767px) {
+  .c-reservation .reservation-inner form label:nth-of-type(1) {
+    margin-top: 36px;
+  }
+}
+
+.c-reservation .reservation-inner form input,
+.c-reservation .reservation-inner form select {
+  margin-top: 14px;
+  margin-bottom: 14px;
+  width: 100%;
+  font-size: 1.6rem;
+  line-height: 16px;
+  display: block;
+  padding-left: 0.5em;
+  overflow: hidden;
+  border: solid 1px #E7E7E7;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (min-width: 767px) {
+  .c-reservation .reservation-inner form input,
+  .c-reservation .reservation-inner form select {
+    height: 32px;
+    font-size: 1.4rem;
+  }
+}
+
+.c-reservation .reservation-inner form input::-webkit-input-placeholder,
+.c-reservation .reservation-inner form select {
+  color: #797878;
+}
+
+.c-reservation .reservation-inner form input:-ms-input-placeholder,
+.c-reservation .reservation-inner form select {
+  color: #797878;
+}
+
+.c-reservation .reservation-inner form input::-ms-input-placeholder,
+.c-reservation .reservation-inner form select {
+  color: #797878;
+}
+
+.c-reservation .reservation-inner form input::placeholder,
+.c-reservation .reservation-inner form select {
+  color: #797878;
+}
+
+.c-reservation.is_open {
+  top: 65px;
   visibility: visible;
   opacity: 1;
+}
+
+@media screen and (min-width: 767px) {
+  .c-reservation.is_open {
+    top: 242px;
+  }
+}
+
+.c-submit-btn {
+  display: block;
+  margin: 30px auto 0;
+  padding: 0 63px;
+  font-family: "YuMincho";
+  line-height: 36px;
+  font-weight: normal;
+  background-color: #fff;
+  border: solid 1px #707070;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (min-width: 767px) {
+  .c-submit-btn {
+    margin-top: 64px;
+    height: 42px;
+  }
 }
 
 .p-header__inner {
@@ -530,16 +688,6 @@ ul {
   height: 80px;
   font-family: "YuMincho";
   position: relative;
-}
-
-.p-header__inner .reservation-inner {
-  position: absolute;
-  top: 200px;
-  color: #fff;
-}
-
-.p-header__inner .reservation-inner.is_open {
-  color: red;
 }
 
 .p-header__inner.scrolled .header__logo a {

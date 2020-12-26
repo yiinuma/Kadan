@@ -1,0 +1,16 @@
+.c-submit-btn {
+    display: block;
+    margin: 30px auto 0;
+    padding: 0 63px;
+    font-family: "YuMincho";
+    line-height: 36px;
+    font-weight: normal;
+    background-color: #fff;
+    border: solid 1px #707070;
+    box-sizing: border-box;
+
+    @include mq-up(sm) {
+        margin-top: 64px;
+        height: 42px;
+    }
+}

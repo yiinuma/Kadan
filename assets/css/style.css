@@ -520,9 +520,9 @@ ul {
 
 .c-reservation {
   position: fixed;
-  top: -77vh;
+  top: -75vh;
   left: 3%;
-  height: 77vh;
+  height: 75vh;
   width: 94%;
   background-color: #fff;
   z-index: 9999;
@@ -559,12 +559,19 @@ ul {
 }
 
 .c-reservation .reservation-inner h2 {
-  padding-top: 29px;
-  padding-bottom: 31px;
+  padding-top: 18px;
+  padding-bottom: 20px;
   font-size: 2rem;
   line-height: 1;
   font-weight: normal;
   text-align: center;
+}
+
+@media screen and (min-width: 767px) {
+  .c-reservation .reservation-inner h2 {
+    padding-top: 29px;
+    padding-bottom: 31px;
+  }
 }
 
 .c-reservation .reservation-inner span {
@@ -587,7 +594,7 @@ ul {
 }
 
 .c-reservation .reservation-inner form label:nth-of-type(1) {
-  margin-top: 34px;
+  margin-top: 20px;
   display: block;
   font-size: 1.6rem;
   line-height: 1;
@@ -601,8 +608,8 @@ ul {
 
 .c-reservation .reservation-inner form input,
 .c-reservation .reservation-inner form select {
-  margin-top: 14px;
-  margin-bottom: 14px;
+  margin-top: 12px;
+  margin-bottom: 12px;
   width: 100%;
   font-size: 1.6rem;
   line-height: 24px;
@@ -659,12 +666,14 @@ ul {
   margin: 30px auto 0;
   padding: 0 63px;
   font-family: "YuMincho";
+  font-size: 1.6rem;
   line-height: 36px;
   font-weight: normal;
   background-color: #fff;
   border: solid 1px #707070;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  outline: none;
 }
 
 @media screen and (min-width: 767px) {
@@ -672,6 +681,31 @@ ul {
     margin-top: 64px;
     height: 42px;
   }
+}
+
+.c-desc-btn {
+  margin: 0 auto;
+  display: block;
+  padding: 0 44px;
+  font-family: "YuMincho";
+  font-size: 1.6rem;
+  line-height: 56px;
+  font-weight: normal;
+  background-color: #fff;
+  border: solid 1px #707070;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+@media screen and (min-width: 960px) {
+  .c-desc-btn {
+    margin: 0;
+  }
+}
+
+.c-desc-btn a {
+  color: #000;
 }
 
 .p-header__inner {
@@ -955,6 +989,283 @@ ul {
     font-size: 3.6rem;
     right: 26.4%;
     bottom: 40%;
+  }
+}
+
+.p-intro {
+  width: 100%;
+  padding: 100px 2vw 40px;
+  background-image: url(../img/bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-width: 767px) {
+  .p-intro {
+    width: 100%;
+    height: 681px;
+    padding-top: 120px;
+  }
+}
+
+.p-intro .intro-inner {
+  margin: 0 auto;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: upright;
+  color: #000;
+}
+
+@media screen and (min-width: 960px) {
+  .p-intro .intro-inner {
+    max-width: 1180px;
+    width: calc(1180/1920*100%);
+    padding-left: 30px;
+  }
+}
+
+.p-intro .intro-inner .intro-title {
+  margin-left: 0.5rem;
+  z-index: 20;
+  font-family: "YuMincho";
+  font-size: 2.2rem;
+  font-weight: normal;
+  line-height: 1.5;
+  letter-spacing: 0.5em;
+  text-indent: -2em;
+}
+
+@media screen and (min-width: 960px) {
+  .p-intro .intro-inner .intro-title {
+    font-size: 2.8rem;
+    margin-right: calc(101/1920*100vw);
+    margin-left: calc(118/1920*100vw);
+  }
+}
+
+.p-intro .intro-inner p {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  color: #000;
+  z-index: 20;
+  font-family: "YuMincho";
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 1.40;
+  letter-spacing: 0.5em;
+}
+
+.p-intro .intro-inner p:not(:nth-of-type(1)) {
+  margin-right: 0.8rem;
+}
+
+@media screen and (min-width: 960px) {
+  .p-intro .intro-inner p:not(:nth-of-type(1)) {
+    margin-right: calc(118/1920*100vw);
+  }
+}
+
+.p-intro .intro-inner .sign-name {
+  text-align: right;
+}
+
+@media screen and (min-width: 960px) {
+  .p-intro .intro-inner .sign-name {
+    margin-left: calc(220/1920*100vw);
+  }
+}
+
+.p-contents {
+  padding: 20px 0;
+}
+
+@media screen and (min-width: 960px) {
+  .p-contents {
+    padding-top: 106px;
+  }
+}
+
+.p-contents .box-img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+@media screen and (min-width: 960px) {
+  .p-contents .box-img {
+    width: 55%;
+  }
+}
+
+.p-contents .room-box,
+.p-contents .menu-box,
+.p-contents .onsen-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "YuMincho";
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 960px) {
+  .p-contents .room-box,
+  .p-contents .menu-box,
+  .p-contents .onsen-box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 122px;
+  }
+}
+
+.p-contents .room-box .room-desc,
+.p-contents .room-box .menu-desc,
+.p-contents .room-box .onsen-desc,
+.p-contents .menu-box .room-desc,
+.p-contents .menu-box .menu-desc,
+.p-contents .menu-box .onsen-desc,
+.p-contents .onsen-box .room-desc,
+.p-contents .onsen-box .menu-desc,
+.p-contents .onsen-box .onsen-desc {
+  width: 98%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+@media screen and (min-width: 960px) {
+  .p-contents .room-box .room-desc,
+  .p-contents .room-box .menu-desc,
+  .p-contents .room-box .onsen-desc,
+  .p-contents .menu-box .room-desc,
+  .p-contents .menu-box .menu-desc,
+  .p-contents .menu-box .onsen-desc,
+  .p-contents .onsen-box .room-desc,
+  .p-contents .onsen-box .menu-desc,
+  .p-contents .onsen-box .onsen-desc {
+    width: 45%;
+    padding: 22px 0 0;
+    padding-left: calc(137/1920*100vw);
+  }
+}
+
+.p-contents .room-box .room-desc h3,
+.p-contents .room-box .menu-desc h3,
+.p-contents .room-box .onsen-desc h3,
+.p-contents .menu-box .room-desc h3,
+.p-contents .menu-box .menu-desc h3,
+.p-contents .menu-box .onsen-desc h3,
+.p-contents .onsen-box .room-desc h3,
+.p-contents .onsen-box .menu-desc h3,
+.p-contents .onsen-box .onsen-desc h3 {
+  margin-bottom: 20px;
+  font-size: 2.1rem;
+  line-height: 1.6;
+  font-weight: normal;
+}
+
+@media screen and (min-width: 960px) {
+  .p-contents .room-box .room-desc h3,
+  .p-contents .room-box .menu-desc h3,
+  .p-contents .room-box .onsen-desc h3,
+  .p-contents .menu-box .room-desc h3,
+  .p-contents .menu-box .menu-desc h3,
+  .p-contents .menu-box .onsen-desc h3,
+  .p-contents .onsen-box .room-desc h3,
+  .p-contents .onsen-box .menu-desc h3,
+  .p-contents .onsen-box .onsen-desc h3 {
+    font-size: calc(22px + ((1vw - 9.6px) * 1.4));
+    line-height: 1.7;
+    margin-bottom: calc(75/1920*100vw);
+  }
+}
+
+.p-contents .room-box .room-desc p,
+.p-contents .room-box .menu-desc p,
+.p-contents .room-box .onsen-desc p,
+.p-contents .menu-box .room-desc p,
+.p-contents .menu-box .menu-desc p,
+.p-contents .menu-box .onsen-desc p,
+.p-contents .onsen-box .room-desc p,
+.p-contents .onsen-box .menu-desc p,
+.p-contents .onsen-box .onsen-desc p {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-weight: normal;
+}
+
+@media screen and (min-width: 960px) {
+  .p-contents .room-box .room-desc p,
+  .p-contents .room-box .menu-desc p,
+  .p-contents .room-box .onsen-desc p,
+  .p-contents .menu-box .room-desc p,
+  .p-contents .menu-box .menu-desc p,
+  .p-contents .menu-box .onsen-desc p,
+  .p-contents .onsen-box .room-desc p,
+  .p-contents .onsen-box .menu-desc p,
+  .p-contents .onsen-box .onsen-desc p {
+    font-size: calc(13px + ((1vw - 9.6px) * 0.31));
+    line-height: 2;
+    margin-bottom: calc(75/1920*100vw);
+  }
+}
+
+.p-contents .room-box .room-desc p br.pc,
+.p-contents .room-box .menu-desc p br.pc,
+.p-contents .room-box .onsen-desc p br.pc,
+.p-contents .menu-box .room-desc p br.pc,
+.p-contents .menu-box .menu-desc p br.pc,
+.p-contents .menu-box .onsen-desc p br.pc,
+.p-contents .onsen-box .room-desc p br.pc,
+.p-contents .onsen-box .menu-desc p br.pc,
+.p-contents .onsen-box .onsen-desc p br.pc {
+  display: none;
+}
+
+@media screen and (min-width: 960px) {
+  .p-contents .room-box .room-desc p br.pc,
+  .p-contents .room-box .menu-desc p br.pc,
+  .p-contents .room-box .onsen-desc p br.pc,
+  .p-contents .menu-box .room-desc p br.pc,
+  .p-contents .menu-box .menu-desc p br.pc,
+  .p-contents .menu-box .onsen-desc p br.pc,
+  .p-contents .onsen-box .room-desc p br.pc,
+  .p-contents .onsen-box .menu-desc p br.pc,
+  .p-contents .onsen-box .onsen-desc p br.pc {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .p-contents .menu-box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .p-contents .menu-box .menu-desc {
+    padding-left: calc(408/1920*100vw);
+    padding-right: 2px;
+  }
+}
+
+.p-contents .onsen-box {
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 960px) {
+  .p-contents .onsen-box {
+    margin-bottom: 79px;
   }
 }
 

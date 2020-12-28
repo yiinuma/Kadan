@@ -1,8 +1,8 @@
 .c-reservation {
   position: fixed;
-  top: -77vh;
+  top: -75vh;
   left: 3%;
-  height: 77vh;
+  height: 75vh;
   width: 94%;
   background-color: #fff;
   z-index: 9999;
@@ -31,12 +31,17 @@
     }
 
     h2 {
-      padding-top: 29px;
-      padding-bottom: 31px;
+      padding-top: 18px;
+      padding-bottom: 20px;
       font-size: 2rem;
       line-height: 1;
       font-weight: normal;
       text-align: center;
+
+      @include mq-up(sm) {
+        padding-top: 29px;
+        padding-bottom: 31px;
+      }
     }
 
     span {
@@ -59,7 +64,7 @@
       }
 
       label:nth-of-type(1) {
-        margin-top: 34px;
+        margin-top: 20px;
         display: block;
         font-size: 1.6rem;
         line-height: 1;
@@ -71,8 +76,8 @@
 
       input,
       select {
-        margin-top: 14px;
-        margin-bottom: 14px;
+        margin-top: 12px;
+        margin-bottom: 12px;
         width: 100%;
         font-size: 1.6rem;
         line-height: 24px;

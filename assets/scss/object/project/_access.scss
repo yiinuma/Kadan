@@ -1,0 +1,80 @@
+.p-access {
+    width: 100%;
+    padding: 40px 3vw;
+    background-image: url(../img/bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include mq-up(sm) {
+        width: 100%;
+        padding-top: 120px;
+        padding-bottom: 110px;
+    }
+
+    .access-box {
+        margin: 0 auto;
+        padding-top: 20px;
+        max-width: 1180px;
+
+        @include mq-up(sm) {
+            display: flex;
+            padding-top: 54px;
+        }
+
+        img {
+            width: 100%;
+
+            @include mq-up(sm) {
+                width: calc(460/960*100vw);
+            }
+
+            @include mq-up(md) {
+                min-width: 460px;
+                max-width: 656px;
+                width: calc(656/1920*100vw);
+            }
+        }
+
+        address {
+            padding-top: 20px;
+            font-family: "YuMincho";
+            font-size: 1.6rem;
+            line-height: 2;
+
+            @include mq-up(sm) {
+                padding-top: 0px;
+                margin-left: 30px;
+            }
+            @include mq-up(md) {
+                margin-left: 83px;
+            }
+
+            dt {
+                font-weight: bold;
+            }
+
+            dd,
+            p {
+                font-weight: normal;
+            }
+        }
+    }
+
+    .gmap {
+        margin: 20px auto 0;
+
+        @include mq-up(sm) {
+            margin: 69px 5vw 0;
+        }
+
+        @include mq-up(md) {
+            margin: 69px auto 0;
+            max-width: 795px;
+        }
+
+        iframe {
+            width: 100%;
+        }
+    }
+}

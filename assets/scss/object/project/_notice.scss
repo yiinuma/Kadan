@@ -1,0 +1,126 @@
+.p-notice {
+    padding: 40px 3vw;
+
+    @include mq-up(sm) {
+        padding: 60px 1vw 60px 1vw;
+    }
+
+    /* タブメニュー */
+    .tab-menu {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        font-family: "YuMincho";
+
+        @include mq-up(sm) {
+            margin-top: 46px;
+        }
+
+        .tab-menu__item {
+            margin: 10px;
+            width: 64px;
+            font-size: 1.6rem;
+            line-height: 1;
+            font-weight: normal;
+        }
+    }
+
+    .tab-trigger {
+        /* label */
+        text-align: center;
+        cursor: pointer;
+        display: block;
+        overflow: hidden;
+        position: relative;
+
+        @include mq-up(sm) {
+            margin-bottom: 49px;
+        }
+
+        &.is-tabActive {
+            border-bottom: 1px solid #000;
+        }
+    }
+
+    /* タブコンテンツ */
+    .tab-content {
+
+        .tab-content__item {
+            box-sizing: border-box;
+            display: none;
+            text-align: left;
+
+            &.is-tabActive {
+                display: block;
+                animation: fade 0.5s ease;
+
+                @include mq-up(sm) {
+                    margin: 0 auto;
+                    max-width: 1180px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                }
+            }
+
+            li {
+                margin-bottom: 20px;
+                padding: 10px;
+                background-color: #F6F6F6;
+
+                @include mq-up(sm) {
+                    padding: 15px 39px 15px 10px;
+                    width: 48.3%;
+                }
+
+                a {
+                    display: flex;
+                    flex-direction: row;
+                    color: #000;
+                    font-family: "YuMincho";
+
+                    img {
+                        width: 103px;
+                        height: 100px;
+                    }
+
+                    time {
+                        margin-left: 15px;
+                        font-size: 1.4rem;
+                        font-weight: normal;
+                        line-height: 1;
+
+                        @include mq-up(sm) {
+                            margin-left: 30px;
+                        }
+                    }
+
+                    p {
+                        margin-left: 15px;
+                        font-size: 1.6rem;
+                        font-weight: normal;
+                        line-height: 2;
+
+                        @include mq-up(sm) {
+                            margin-left: 30px;
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+
+        @keyframes fade {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    }
+
+}

@@ -112,3 +112,4 @@ const config = {
     dateFormat: "Y-m-d"
 }
 flatpickr('.flatpickr', config);
+

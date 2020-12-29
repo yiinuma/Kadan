@@ -1,37 +1,69 @@
-footer{
-  background: #F8F8F8;
-  .footer-inner{
-    text-align: center;
-    .footer-title{
-      padding-top: 43px;
-      margin-bottom: 21px;
-      font-size: 2.4rem;
-      line-height: 1.2;
-    }
-    ul{
-      display: flex;
-      justify-content: center;
-      margin-bottom: 52px;
-      li{
-        font-size: 1.6rem;
-        font-weight: bold;
-        line-height: 1.75;
-        @include mq-down(md) {
-          font-size: 1.4rem;
-        }
-        a{
-        color: $txt-color;
-        }
-      }
-      li:first-child{
-        margin-right: 29px;
-      }
-    }
-    .copy-right{
-      padding-bottom: 49px;
-      font-size: 1.4rem;
-      font-weight: normal;
-      line-height: 1.4;
-    }
-  }
+.footer__inner {
+	width: 100%;
+	padding: 40px 3vw;
+	background-image: url(../img/bg3.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+	font-family: "YuMincho";
+
+	@include mq-up(sm) {
+		width: 100%;
+		padding: 64px 0 45px;
+	}
+
+	ul {
+		margin: 0 auto;
+		padding-bottom: 20px;
+		width: 122px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-between;
+		writing-mode: vertical-rl;
+
+		@include mq-up(md) {
+			padding-bottom: 80px;
+		}
+
+		li {
+			font-size: 1.8rem;
+			font-weight: normal;
+			line-height: 1.78;
+
+			a {
+				color: #000;
+				letter-spacing: 1em;
+			}
+		}
+	}
+
+	address {
+		padding-top: 20px;
+		font-size: 1.6rem;
+		font-weight: normal;
+		line-height: 2;
+
+		@include mq-up(md) {
+			padding-top: 56px;
+			line-height: 3;
+		}
+
+		.zip,
+		.tel {
+			margin-right: 21px;
+		}
+	}
+}
+
+.copy-right {
+	padding-top: 17px;
+	padding-bottom: 19px;
+	text-align: center;
+	background-color: #000;
+	color: #fff;
+	font-size: 1.2rem;
+	font-weight: normal;
+	line-height: 2;
 }

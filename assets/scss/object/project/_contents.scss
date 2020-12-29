@@ -1,7 +1,7 @@
 .p-contents {
     padding: 20px 0;
 
-    @include mq-up(md) {
+    @include mq-up(sm) {
         padding-top: 106px;
     }
 
@@ -9,7 +9,7 @@
         width: 100%;
         vertical-align: bottom;
 
-        @include mq-up(md) {
+        @include mq-up(sm) {
             width: 55%;
         }
     }
@@ -22,7 +22,7 @@
         font-family: "YuMincho";
         margin-bottom: 40px;
 
-        @include mq-up(md) {
+        @include mq-up(sm) {
             flex-direction: row;
             margin-bottom: 122px;
         }
@@ -34,7 +34,7 @@
             margin: 0 auto;
             padding: 20px;
 
-            @include mq-up(md) {
+            @include mq-up(sm) {
                 width: 45%;
                 padding: 22px 0 0;
                 padding-left: calc(137/1920*100vw);
@@ -46,7 +46,7 @@
                 line-height: 1.6;
                 font-weight: normal;
 
-                @include mq-up(md) {
+                @include mq-up(sm) {
                     font-size: calc(22px + ((1vw - 9.6px) * 1.4));
                     line-height: 1.7;
                     margin-bottom: calc(75/1920*100vw);
@@ -59,7 +59,7 @@
                 line-height: 1.6;
                 font-weight: normal;
 
-                @include mq-up(md) {
+                @include mq-up(sm) {
                     font-size: calc(13px + ((1vw - 9.6px) * 0.31));
                     line-height: 2;
                     margin-bottom: calc(75/1920*100vw);
@@ -68,7 +68,7 @@
                 br.pc {
                     display: none;
 
-                    @include mq-up(md) {
+                    @include mq-up(sm) {
                         display: block;
                     }
                 }

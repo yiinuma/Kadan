@@ -1,4 +1,4 @@
-.p-room-contents {
+.p-common-contents {
     padding: 20px 3vw 3px;
 
     @include mq-up(sm) {
@@ -7,10 +7,10 @@
     }
 
     @include mq-up(md) {
-        margin: calc(78px - 16px) 0 ;
+        margin: calc(78px - 16px) 0;
     }
 
-    .room1-box {
+    .box1 {
         margin: 0 auto;
         width: 100%;
 
@@ -40,7 +40,7 @@
             }
         }
 
-        .room1-desc {
+        .desc1 {
             z-index: -1;
             padding: 20px 5% 5% 5%;
             background-image: url(../img/bg.jpg);
@@ -61,7 +61,7 @@
             @include mq-up(md) {
                 width: 68.9%;
                 height: 381px;
-                padding: 80px 5.8% 9.3% 20.1%;
+                padding: 80px 5.3% 9.3% 20.1%;
                 top: 57px;
                 right: 0;
             }
@@ -101,8 +101,18 @@
         }
     }
 
-    .room2-box {
-        @extend .room1-box;
+    .box2 {
+        @extend .box1;
+
+        &.onsen {
+            margin-bottom: 20px;
+
+            @include mq-up(md) {
+                margin-top: 84px;
+                margin-bottom: 150px;
+            }
+        }
+
 
         @include mq-up(sm) {
             margin-top: 84px;
@@ -113,34 +123,37 @@
             }
         }
 
-        .room2-desc {
-            @extend .room1-desc;
+        .desc2 {
+            @extend .desc1;
 
             @include mq-up(sm) {
                 position: absolute;
                 left: 0;
                 padding: 80px 25% 9% 2%;
             }
+
             @include mq-up(md) {
                 position: absolute;
                 left: 0;
                 padding-top: 60px;
                 padding-bottom: 7.5%;
                 padding-left: 5.1%;
+                padding-right: 0;
             }
         }
     }
 
-    .room3-box {
-        @extend .room1-box;
+    .box3 {
+        @extend .box1;
         margin-bottom: 20px;
+
         @include mq-up(md) {
             margin-top: 84px;
-            margin-bottom: 150px;
+            margin-bottom: 155px;
         }
 
-        .room3-desc {
-            @extend .room1-desc;
+        .desc3 {
+            @extend .desc1;
         }
     }
 }

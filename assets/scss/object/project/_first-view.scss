@@ -117,4 +117,14 @@
             color: #fff;
         }
     }
+
+    &.food {
+        @extend .room;
+        background-image: url(../img/menu-header.jpg);
+    }
+
+    &.onsen {
+        @extend .room;
+        background-image: url(../img/onsen-header.jpg);
+    }
 }

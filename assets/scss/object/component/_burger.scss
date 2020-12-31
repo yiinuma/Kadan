@@ -1,74 +1,149 @@
-// burger
-
-$burger-height: 50px;
-$burger-width: 50px;
-
 .c-burger {
 
-  height: $burger-height;
-  width: $burger-width;
-  padding: 12px;
-  transition: 0.5s;
-  box-sizing: border-box;
-  cursor: pointer;
-  outline: none;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-
   position: fixed;
-  z-index: 150;
-  position: absolute;
-  top: 16px;
-  right: 3px;
 
-  &__line {
-    width: 100%;
-    height: 2px;
-    background-color: #FFF;
-    transition: 0.3s;
-
-  }
-
-  &.scrolled,
-  &.bg-fix {
-    .c-burger__line {
-      background-color: #000;
-    }
-  }
-
-  &.is_active {
-
-    .c-burger__line {
-      &.scrolled,
-      &.bg-fix {
-        background-color: #000;
-      }
-    }
-
-    .c-burger__line:first-of-type {
-      transform: rotate(-45deg) translate(-7px, 7px);
-    }
-
-    .c-burger__line:nth-child(2) {
-      opacity: 0;
-    }
-
-    .c-burger__line:last-of-type {
-      transform: rotate(-135deg) translate(5px, 6px);
-    }
-
-    &.scrolled {
-
-      .c-burger__line:first-of-type,
-      .c-burger__line:last-of-type {
-        background-color: #000;
-      }
-    }
-  }
+  $btnWidth: 20px;
+  $btnHeight: 1px;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  outline: none;
 
   @include mq-up(sm) {
     display: none;
   }
+
+  &::before,
+  &::after {
+    content: "";
+    width: $btnWidth;
+    height: $btnHeight;
+    background: #fff;
+    position: absolute;
+    left : calc(50% - (#{$btnWidth} / 2));
+    display: block;
+    transition: transform 0.2s;
+  }
+
+  &.scrolled,
+  &.bg-fix {
+
+    &::before,
+    &::after {
+      background: #000;
+    }
+
+    span {
+      background: #000;
+    }
+  }
+
+
+  &::before {
+    // top: 22px;
+    top: 17px;
+  }
+
+  &::after {
+    // top: 38px;
+    top: 32px;
+  }
+
+  >span {
+    width: $btnWidth;
+    height: $btnHeight;
+    font-size: 0;
+    background: #fff;
+    background-size: auto $btnHeight;
+    position: absolute;
+    left : calc(50% - (#{$btnWidth} / 2));
+    top: 50%;
+    transition: transform 0.2s;
+  }
+
+  &.is_active {
+    &::before {
+      transform: rotate(45deg);
+      top: 25px;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+      top: 25px;
+    }
+
+    >span {
+      background: none;
+    }
+  }
 }
+
+// $burger-height: 50px;
+// $burger-width: 50px;
+
+// height: $burger-height;
+// width: $burger-width;
+// padding: 12px;
+// transition: 0.5s;
+// box-sizing: border-box;
+// cursor: pointer;
+// outline: none;
+
+// display: flex;
+// flex-direction: column;
+// justify-content: space-around;
+
+// position: fixed;
+// z-index: 150;
+// top: 16px;
+// right: 3px;
+
+// &__line {
+//   width: 100%;
+//   height: 2px;
+//   background-color: #FFF;
+//   transition: 0.3s;
+
+// }
+
+// &.scrolled,
+// &.bg-fix {
+//   .c-burger__line {
+//     background-color: #000;
+//   }
+// }
+
+// &.is_active {
+
+//   .c-burger__line {
+//     &.scrolled,
+//     &.bg-fix {
+//       background-color: #000;
+//     }
+//   }
+
+//   .c-burger__line:first-of-type {
+//     transform: rotate(-45deg) translate(-7px, 7px);
+//   }
+
+//   .c-burger__line:nth-child(2) {
+//     opacity: 0;
+//   }
+
+//   .c-burger__line:last-of-type {
+//     transform: rotate(-135deg) translate(5px, 6px);
+//   }
+
+//   &.scrolled {
+
+//     .c-burger__line:first-of-type,
+//     .c-burger__line:last-of-type {
+//       background-color: #000;
+//     }
+//   }
+// }
+
+// @include mq-up(sm) {
+//   display: none;
+// }
+// }

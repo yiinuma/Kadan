@@ -427,70 +427,78 @@ ul {
 }
 
 .c-burger {
-  height: 50px;
-  width: 50px;
-  padding: 12px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  cursor: pointer;
-  outline: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   position: fixed;
-  z-index: 150;
-  position: absolute;
-  top: 16px;
-  right: 3px;
-}
-
-.c-burger__line {
-  width: 100%;
-  height: 2px;
-  background-color: #FFF;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.c-burger.scrolled .c-burger__line, .c-burger.bg-fix .c-burger__line {
-  background-color: #000;
-}
-
-.c-burger.is_active .c-burger__line.scrolled, .c-burger.is_active .c-burger__line.bg-fix {
-  background-color: #000;
-}
-
-.c-burger.is_active .c-burger__line:first-of-type {
-  -webkit-transform: rotate(-45deg) translate(-7px, 7px);
-          transform: rotate(-45deg) translate(-7px, 7px);
-}
-
-.c-burger.is_active .c-burger__line:nth-child(2) {
-  opacity: 0;
-}
-
-.c-burger.is_active .c-burger__line:last-of-type {
-  -webkit-transform: rotate(-135deg) translate(5px, 6px);
-          transform: rotate(-135deg) translate(5px, 6px);
-}
-
-.c-burger.is_active.scrolled .c-burger__line:first-of-type,
-.c-burger.is_active.scrolled .c-burger__line:last-of-type {
-  background-color: #000;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  outline: none;
 }
 
 @media screen and (min-width: 767px) {
   .c-burger {
     display: none;
   }
+}
+
+.c-burger::before, .c-burger::after {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  left: calc(50% - (20px / 2));
+  display: block;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.c-burger.scrolled::before, .c-burger.scrolled::after, .c-burger.bg-fix::before, .c-burger.bg-fix::after {
+  background: #000;
+}
+
+.c-burger.scrolled span, .c-burger.bg-fix span {
+  background: #000;
+}
+
+.c-burger::before {
+  top: 17px;
+}
+
+.c-burger::after {
+  top: 32px;
+}
+
+.c-burger > span {
+  width: 20px;
+  height: 1px;
+  font-size: 0;
+  background: #fff;
+  background-size: auto 1px;
+  position: absolute;
+  left: calc(50% - (20px / 2));
+  top: 50%;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.c-burger.is_active::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 25px;
+}
+
+.c-burger.is_active::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 25px;
+}
+
+.c-burger.is_active > span {
+  background: none;
 }
 
 .c-filter {
@@ -822,7 +830,7 @@ ul {
 }
 
 .p-header__inner .c-reservation-btn {
-  position: relative;
+  position: absolute;
   right: 17%;
   outline: none;
 }

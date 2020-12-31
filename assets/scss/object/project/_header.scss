@@ -34,7 +34,7 @@
     }
 
     .c-reservation-btn {
-        position: relative;
+        position: absolute;
         right: 17%;
         outline: none;
 
@@ -121,7 +121,6 @@
                     }
                 }
             }
-
         }
 
         @include mq-up(sm) {
@@ -147,6 +146,4 @@
 
         }
     }
-
-
 }

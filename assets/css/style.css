@@ -813,6 +813,14 @@ ul {
   position: relative;
 }
 
+@media screen and (min-width: 767px) {
+  .p-header__inner {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
 .p-header__inner.scrolled .header__title .header__logo a, .p-header__inner.bg-fix .header__title .header__logo a {
   color: #000;
 }

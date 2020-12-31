@@ -7,6 +7,9 @@
     height: 80px;
     font-family: "YuMincho";
     position: relative;
+    @include mq-up(sm) {
+        justify-content: flex-start;
+    }
 
     &.scrolled,
     &.bg-fix {

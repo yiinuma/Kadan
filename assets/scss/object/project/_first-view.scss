@@ -69,7 +69,6 @@
         .mb03 {
             background-image: url(../img/mainbg03.jpg);
         }
-
     }
 
     .first__catch {
@@ -90,6 +89,32 @@
             letter-spacing: 0.23em;
             right: 26.4%;
             bottom: 40%;
+        }
+    }
+
+    &.room {
+        background-image: url(../img/oheya-header.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include mq-up(sm) {
+            margin-top: 40px;
+            width: 100vw;
+            height: 580px;
+            object-fit: cover;
+        }
+
+        .first-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            font-family: "YuMincho";
+            font-size: 34px;
+            font-weight: bold;
+            line-height: 1.2;
+            color: #fff;
         }
     }
 }

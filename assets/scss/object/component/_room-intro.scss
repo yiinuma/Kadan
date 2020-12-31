@@ -1,0 +1,13 @@
+.c-room-intro {
+    margin: 20px 0;
+    padding: 0 2vw;
+    font-family: "YuMincho";
+    font-size: 1.6rem;
+    font-weight: normal;
+    line-height: 2;
+
+    @include mq-up(sm) {
+        margin: 0 auto;
+        text-align: center;
+    }
+}

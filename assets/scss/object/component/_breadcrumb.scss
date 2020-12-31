@@ -1,0 +1,29 @@
+.c-breadcrumb {
+  padding: 12px 3vw;
+  font-family: "YuMincho";
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 1;
+  @include mq-up(sm) {
+    margin: 0 auto;
+    max-width: 1180px;
+    padding: 36px 0 ;
+  }
+
+  ul {
+    display: flex;
+
+    li::after {
+      content: '＞';
+      display: inline-block;
+    }
+
+    a {
+      color: #000;
+    }
+
+    li:last-child::after {
+      display: none;
+    }
+  }
+}

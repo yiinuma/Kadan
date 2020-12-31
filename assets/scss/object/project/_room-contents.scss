@@ -1,0 +1,146 @@
+.p-room-contents {
+    padding: 20px 3vw 3px;
+
+    @include mq-up(sm) {
+        margin: calc(78px - 16px) 3vw 0;
+        padding: 0;
+    }
+
+    @include mq-up(md) {
+        margin: calc(78px - 16px) 0 ;
+    }
+
+    .room1-box {
+        margin: 0 auto;
+        width: 100%;
+
+        @include mq-up(sm) {
+            margin-top: calc(78px - 16px);
+            height: 438px;
+            margin: 0 auto;
+            max-width: 1180px;
+            position: relative;
+        }
+
+        img {
+            margin: 0 auto;
+            width: 100%;
+            height: calc(94vw * 0.57);
+            object-fit: cover;
+            vertical-align: bottom;
+
+            @include mq-up(sm) {
+                width: 50vw;
+                height: calc(55vw * 0.57);
+            }
+
+            @include mq-up(md) {
+                width: 44.9%;
+                height: calc(1180px * 0.449 * 0.57);
+            }
+        }
+
+        .room1-desc {
+            z-index: -1;
+            padding: 20px 5% 5% 5%;
+            background-image: url(../img/bg.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: "YuMincho";
+
+            @include mq-up(sm) {
+                position: absolute;
+                width: 68.9%;
+                height: 381px;
+                padding: 80px 2% 9% 25%;
+                top: 57px;
+                right: 0;
+            }
+
+            @include mq-up(md) {
+                width: 68.9%;
+                height: 381px;
+                padding: 80px 5.8% 9.3% 20.1%;
+                top: 57px;
+                right: 0;
+            }
+
+            h3 {
+                font-size: 2rem;
+                line-height: 1;
+                font-weight: normal;
+
+                @include mq-up(sm) {
+                    font-size: 2.4rem;
+                }
+            }
+
+            p {
+                margin-top: 8px;
+                font-size: 1.4rem;
+                line-height: 2;
+                font-weight: normal;
+
+                @include mq-up(sm) {
+                    font-size: 1.6rem;
+                    margin-top: 36px;
+                }
+            }
+
+            .note {
+                margin-top: 8px;
+                font-size: 1.4rem;
+                line-height: 1.5;
+                font-weight: normal;
+
+                @include mq-up(sm) {
+                    margin-top: calc(52px - (21px - 14px)/2);
+                }
+            }
+        }
+    }
+
+    .room2-box {
+        @extend .room1-box;
+
+        @include mq-up(sm) {
+            margin-top: 84px;
+
+            img {
+                position: absolute;
+                right: 0;
+            }
+        }
+
+        .room2-desc {
+            @extend .room1-desc;
+
+            @include mq-up(sm) {
+                position: absolute;
+                left: 0;
+                padding: 80px 25% 9% 2%;
+            }
+            @include mq-up(md) {
+                position: absolute;
+                left: 0;
+                padding-top: 60px;
+                padding-bottom: 7.5%;
+                padding-left: 5.1%;
+            }
+        }
+    }
+
+    .room3-box {
+        @extend .room1-box;
+        margin-bottom: 20px;
+        @include mq-up(md) {
+            margin-top: 84px;
+            margin-bottom: 150px;
+        }
+
+        .room3-desc {
+            @extend .room1-desc;
+        }
+    }
+}

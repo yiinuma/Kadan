@@ -31,7 +31,8 @@ $burger-width: 50px;
 
   }
 
-  &.scrolled {
+  &.scrolled,
+  &.bg-fix {
     .c-burger__line {
       background-color: #000;
     }
@@ -40,9 +41,8 @@ $burger-width: 50px;
   &.is_active {
 
     .c-burger__line {
-      background-color: #fff;
-
-      &.scrolled {
+      &.scrolled,
+      &.bg-fix {
         background-color: #000;
       }
     }
@@ -60,6 +60,7 @@ $burger-width: 50px;
     }
 
     &.scrolled {
+
       .c-burger__line:first-of-type,
       .c-burger__line:last-of-type {
         background-color: #000;

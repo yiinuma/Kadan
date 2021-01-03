@@ -8,14 +8,14 @@
     <meta name="description" content="日本古来の素材と現代的表現を併せ持つ温泉旅館、石井花壇。伝統的「和」の息づく空間で、至極のひとときをお過ごしください。" />
     <title>お部屋 - 石井花壇 | 温海温泉旅館【公式サイト】</title>
     <link rel="shortcut icon" href="assets/img/logo01.png" type="image/x-icon">
-	<link rel="stylesheet" href="assets/css/style.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-	<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-	<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
-	<script src="assets/js/header.js" defer></script>
-	<script src="assets/js/main.js" defer></script>
-	<script src="assets/js/tab.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
+    <script src="assets/js/header.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/tab.js"></script>
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
@@ -24,7 +24,7 @@
                     "@type": "ListItem",
                     "position": 1,
                     "item": {
-                        "@id": "http://127.0.0.1:3000/",
+                        "@id": "https://www.ys-pps.com/portfolio/works/kadan/",
                         "name": "石井花壇 | 温海温泉旅館【公式サイト】"
                     }
                 },
@@ -32,7 +32,7 @@
                     "@type": "ListItem",
                     "position": 2,
                     "item": {
-                        "@id": "http://127.0.0.1:3000/room.html",
+                        "@id": "https://www.ys-pps.com/portfolio/works/kadan/room.html",
                         "name": "お部屋"
                     }
                 }
@@ -43,65 +43,65 @@
 
 <body>
     <header class="l-header  bg-fix" id="header">
-		<div id="filter" class="c-filter"></div>
-		<div class="p-header__inner bg-fix">
-			<div class="header__title">
-				<h1 class="header__logo"><a href="./">石井花壇</a></h1>
-			</div>
-			<nav class="header__nav" id="header-nav">
-				<ul class="header-menu">
-					<li><a href="room.html">お部屋</a></li>
-					<li><a href="food.html">お料理</a></li>
-					<li><a href="onsen.html">温泉</a></li>
-				</ul>
-			</nav>
-			<!-- /.header__nav -->
-			<button type="button" class="c-reservation-btn">
-				<img class="calender" src="assets/img/calender.png" alt="カレンダー"><span>宿泊予約</span>
-			</button>
+        <div id="filter" class="c-filter"></div>
+        <div class="p-header__inner bg-fix">
+            <div class="header__title">
+                <h1 class="header__logo"><a href="./">石井花壇</a></h1>
+            </div>
+            <nav class="header__nav" id="header-nav">
+                <ul class="header-menu">
+                    <li><a href="room.html">お部屋</a></li>
+                    <li><a href="food.html">お料理</a></li>
+                    <li><a href="onsen.html">温泉</a></li>
+                </ul>
+            </nav>
+            <!-- /.header__nav -->
+            <button type="button" class="c-reservation-btn">
+                <img class="calender" src="assets/img/calender.png" alt="カレンダー"><span>宿泊予約</span>
+            </button>
 
-			<div class="c-reservation">
-				<div class="reservation-inner">
-					<h2>宿泊予約</h2>
-					<span class="r-close"><img src="assets/img/close.png" alt="close"></span>
+            <div class="c-reservation">
+                <div class="reservation-inner">
+                    <h2>宿泊予約</h2>
+                    <span class="r-close"><img src="assets/img/close.png" alt="close"></span>
 
-					<form action="">
-						<label for="name">お名前</label>
-						<input type="name" id="name" placeholder="例：石井正悟">
-						<label for="email">メールアドレス</label>
-						<input type="email" id="email" placeholder="例：Example@example.com">
-						<label for="plan">ご希望プラン（空いているプランのみ表示されます）</label>
-						<select id="plan" onchange="changeItem(this)" required>
-							<option value="0" hidden>プランを選択してください</option>
-							<option value="1">【期間限定】海辺の四季旬彩、贅沢美味懐石プラン</option>
-							<option value="2">平日に優雅に楽しむ、特別宿泊プラン</option>
-							<option value="3">絶景貸切露天と個室会席を満喫できるファミリープラン</option>
-						</select>
-						<label for="flatpickr">日時選択</label>
-						<input type="text" class="flatpickr" placeholder="日時を選択してください" readonly="readonly">
-					</form>
-					<input type="submit" class="c-submit-btn" value="送信する">
-				</div>
-			</div><!-- /.c-reservation -->
-			<button type="button" id="burger-btn" class="c-burger bg-fix">
-				<span class=c-burger__line></span>
-				<span class=c-burger__line></span>
-				<span class=c-burger__line></span>
-			</button>
-		</div>
-		<!-- /.p-header__inner -->
-	</header>
+                    <form action="">
+                        <label for="name">お名前</label>
+                        <input type="name" id="name" placeholder="例：石井正悟">
+                        <label for="email">メールアドレス</label>
+                        <input type="email" id="email" placeholder="例：Example@example.com">
+                        <label for="plan">ご希望プラン（空いているプランのみ表示されます）</label>
+                        <select id="plan" onchange="changeItem(this)" required>
+                            <option value="0" hidden>プランを選択してください</option>
+                            <option value="1">【期間限定】海辺の四季旬彩、贅沢美味懐石プラン</option>
+                            <option value="2">平日に優雅に楽しむ、特別宿泊プラン</option>
+                            <option value="3">絶景貸切露天と個室会席を満喫できるファミリープラン</option>
+                        </select>
+                        <label for="flatpickr">日時選択</label>
+                        <input type="text" class="flatpickr" placeholder="日時を選択してください" readonly="readonly">
+                    </form>
+                    <input type="submit" class="c-submit-btn" value="送信する">
+                </div>
+            </div><!-- /.c-reservation -->
+            <button type="button" id="burger-btn" class="c-burger bg-fix">
+                <span class=c-burger__line></span>
+                <span class=c-burger__line></span>
+                <span class=c-burger__line></span>
+            </button>
+        </div>
+        <!-- /.p-header__inner -->
+    </header>
     <!-- /.header -->
-    
+
     <main class="l-main">
         <div id="filter" class="c-filter"></div>
 
-		<section class="p-first-view room">
-			<div class="first__imgBox">
+        <section class="p-first-view room">
+            <div class="first__imgBox">
                 <h2 class="first-title">お部屋</h2>
             </div>
         </section><!-- /.p-first-view -->
-        
+
         <div class="c-breadcrumb">
             <ul>
                 <li><a href="index.html">トップ</a></li>
@@ -109,7 +109,7 @@
             </ul>
         </div>
 
-        <div class="c-intro"  data-aos="zoom">
+        <div class="c-intro" data-aos="zoom">
             <p>創業より受け継がれてきた石井花壇の和の造り<br>
                 温海の雄大な絶景を堪能していただけるように設計された客室<br>
                 ゆるやかに流れ行く時間に身を委ねて</p>
@@ -130,7 +130,7 @@
             </div><!-- /.box1 -->
         </section><!-- /.p-common-contents -->
 
-        <section class="p-common-contents"  data-aos="zoom">
+        <section class="p-common-contents" data-aos="zoom">
             <div class="box2">
                 <figure><img src="assets/img/oheya02.jpg" alt=""></figure>
                 <div class="desc2">
@@ -159,7 +159,7 @@
                 </div>
             </div><!-- /.box3 -->
         </section><!-- /.p-common-contents -->
-        
+
     </main><!-- /.l-main -->
 
     <footer class="l-footer">

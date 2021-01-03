@@ -761,22 +761,22 @@ ul {
   }
 }
 
-.c-breadcrumb ul {
+.c-breadcrumb .breadcrumb__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c-breadcrumb ul li::after {
+.c-breadcrumb .breadcrumb__list .breadcrumb__item::after {
   content: '＞';
   display: inline-block;
 }
 
-.c-breadcrumb ul a {
+.c-breadcrumb .breadcrumb__list span {
   color: #000;
 }
 
-.c-breadcrumb ul li:last-child::after {
+.c-breadcrumb .breadcrumb__list .breadcrumb__item:last-child::after {
   display: none;
 }
 

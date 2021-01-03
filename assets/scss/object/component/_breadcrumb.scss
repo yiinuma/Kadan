@@ -4,25 +4,26 @@
   font-size: 1.6rem;
   font-weight: normal;
   line-height: 1;
+
   @include mq-up(sm) {
     margin: 0 auto;
     max-width: 1180px;
-    padding: 36px 0 ;
+    padding: 36px 0;
   }
 
-  ul {
+  .breadcrumb__list {
     display: flex;
 
-    li::after {
+    .breadcrumb__item::after {
       content: '＞';
       display: inline-block;
     }
 
-    a {
+    span {
       color: #000;
     }
 
-    li:last-child::after {
+    .breadcrumb__item:last-child::after {
       display: none;
     }
   }
